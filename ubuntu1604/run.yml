@@ -1,0 +1,3 @@
+---
+- include: playbooks/swapoff.yml
+- include: playbooks/resolvconf.yml

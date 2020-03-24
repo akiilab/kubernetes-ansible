@@ -1,0 +1,4 @@
+kubespray
+
+# ansible
+*.retry

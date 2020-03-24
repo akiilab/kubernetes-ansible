@@ -1,0 +1,15 @@
+# https://github.com/kubernetes-retired/contrib/blob/master/ansible/roles/node/tasks/swapoff.yml
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Disable swap (1/2)
+      command: swapoff -a
+      when: ansible_swaptotal_mb > 0
+
+    - name: Remove swapfile from /etc/fstab (2/2)
+      replace:
+        path: /etc/fstab
+        regexp: '^[^#](.+?\sswap\s+sw\s+.*)$'
+        replace: '# \1'
+
