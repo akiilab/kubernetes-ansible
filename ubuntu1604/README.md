@@ -67,4 +67,10 @@ rm -rf /etc/etcd.env
 rm -rf /etc/ssl/etcd
 rm -rf /etc/ssl/certs/etcd-ca.pem
 rm -rf /usr/local/share/ca-certificates/etcd-ca.crt
+
+rm -rf /root/.helm
+rm -rf /root/.kube
+rm -rf /root/kube-manifests
+rm -rf /root/.ansible
+rm -rf /root/.config
 ```
