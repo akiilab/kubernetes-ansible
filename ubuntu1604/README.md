@@ -52,4 +52,19 @@ ansible-playbook -i inventory/mycluster/inventory.ini --become --become-user=roo
 ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
 ```
 
+## Clean
 
+```shell
+kubeadm reset
+
+ipvsadm --clear
+
+docker stop $(docker ps -aq -f name=etcd)
+docker rm $(docker ps -aq -f name=etcd)
+
+rm -rf /etc/kubernetes
+rm -rf /etc/etcd.env
+rm -rf /etc/ssl/etcd
+rm -rf /etc/ssl/certs/etcd-ca.pem
+rm -rf /usr/local/share/ca-certificates/etcd-ca.crt
+```
