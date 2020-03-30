@@ -73,4 +73,8 @@ rm -rf /root/.kube
 rm -rf /root/kube-manifests
 rm -rf /root/.ansible
 rm -rf /root/.config
+
+rm -rf /usr/local/bin/etcd*
+rm -rf /usr/local/bin/kube*
+rm -rf /usr/local/bin/helm
 ```
