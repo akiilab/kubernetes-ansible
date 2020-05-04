@@ -77,4 +77,8 @@ rm -rf /root/.config
 rm -rf /usr/local/bin/etcd*
 rm -rf /usr/local/bin/kube*
 rm -rf /usr/local/bin/helm
+
+rm -rf /etc/systemd/system/etcd.service
+rm -rf /etc/systemd/system/kubelet.service
+rm -rf /etc/systemd/system/kubelet.service
 ```
