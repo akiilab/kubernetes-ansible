@@ -5,6 +5,10 @@
     dns: 8.8.8.8
 
   tasks:
+    - name: Install Resolvconf
+      apt:
+        name: resolvconf
+
     - name: Setup Docker Daemon (1/2)
       copy:
         dest: /etc/resolvconf/resolv.conf.d/head
