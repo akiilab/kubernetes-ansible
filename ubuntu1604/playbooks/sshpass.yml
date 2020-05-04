@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Install sshpass
+      apt:
+        name: sshpass
+
+

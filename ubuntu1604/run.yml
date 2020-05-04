@@ -1,3 +1,4 @@
 ---
 - include: playbooks/swapoff.yml
 - include: playbooks/resolvconf.yml
+- include: playbooks/sshpass.yml
